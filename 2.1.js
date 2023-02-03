@@ -5,10 +5,10 @@ Input: ("text education part 2", "text education")
 Output: " part 2"
 */
 
-const compare = (str1, str2) => {
-  const long = (str1.length > str2.length) ? str1 : str2;
-  const short = (str1.length < str2.length) ? str1 : str2;
+const compareStrings = (str1, str2) => {
+  const longString = (str1.length > str2.length) ? str1 : str2;
+  const shortString = (str1.length < str2.length) ? str1 : str2;
 
-  return long.slice(short.length,long.length)
+  return longString.slice(shortString.length,longString.length)
 }
-console.log(compare("text education part 2","text education"));
+console.log(compareStrings("text education part 2","text education"));
