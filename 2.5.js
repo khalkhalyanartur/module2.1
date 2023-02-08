@@ -9,35 +9,30 @@ Output: ["a_i", "d_c", "o_ ", "p_r", "t_2", "t_e", "t_s"]
 const text = "test education part 2";
 
 const splitString = (str) => {
-  let strArray = [];
-  let randomChar;
+  const strArray = [];
+  const result = [];
+  const randomChar = '_';
 
-  for (let i = 0; i < str.length; i+=3 ) {
-    strArray.push(str.slice(i,i+3));
-  }
-
-    randomChar = '_';
-    
-  for (let i = 0; i < strArray.length; i++) {
-    strArray[i] = strArray[i].replace(strArray[i][1], randomChar);
+  for (let i = 0; i < str.length; i += 3 ) {
+    strArray.push(str.slice(i,i + 3));
   }
 
   for (let i = 0; i < strArray.length; i++) {
-    //console.log(strArray[i]);
-    for (let j = i+1; j < strArray.length; j++) {
-      //console.log(" ", strArray[j]);
-      if (strArray[i] > strArray[j]) {
-        let temp;
-        temp = strArray[i];
-        strArray[i] = strArray[j];
-        strArray[j] = temp;
-        //console.log(i," = ",strArray[i]);
-        //console.log(j," = ",strArray[j]);
+    result.push(strArray[i][0]+randomChar+strArray[i][2]); 
+  }
+
+  for (let i = 0; i < result.length; i++) {
+    for (let j = i + 1; j < result.length; j++) {
+      
+      if (result[i] > result[j]) {
+        let temp = result[i];
+        result[i] = result[j];
+        result[j] = temp;
       } 
     }
   }
 
-  return strArray; 
+  return result;
 }
 
 console.log(splitString(text));
