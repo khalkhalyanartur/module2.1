@@ -17,13 +17,16 @@ const range = (start, end, step = 1) => {
   }
 
   if (start < end && step >= 0) {
-    for (let i = start; i <= end; i = i + step) result.push(i);
+    for (let i = start; i <= end; i = i + step) {
+      result.push(i);
+    }
   } else {
-    for (let i = start; i >= end; i = i + step) result.push(i);
+    for (let i = start; i >= end; i = i + step) {
+      result.push(i);
+    }
   }
 
   return result;
-
 }
 
 console.log(range(20, 1, -2));
