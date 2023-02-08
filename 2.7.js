@@ -11,7 +11,7 @@ const isPolindrom = (string) => {
   let result = true;
 
   for (let i = 0; i < (string.length) / 2; i++) {
-    if (string[i] != string[string.length-i-1]) {
+    if (string[i] !== string[string.length - i - 1]) {
       result = false;
       return result;
     }
