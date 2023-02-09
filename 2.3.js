@@ -17,7 +17,7 @@ const removeDuplicates = (arr) => {
     dublicat = false;
     for (let j = 0; j < result.length; j++) {
 
-      if (typeof arr[i] === 'string' && (arr[i] === result[j] || arr[i].toLowerCase() === result[j].toLowerCase())) {
+      if (typeof arr[i] === 'string' &&  arr[i].toLowerCase() === result[j].toLowerCase()) {
         dublicat = true;
         break;
       }
