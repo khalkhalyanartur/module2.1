@@ -29,7 +29,7 @@ const removeDuplicates = (arr) => {
     }
 
     if (!dublicat) {
-    result.push(arr[i]);
+      result.push(arr[i]);
     }
   }
 
