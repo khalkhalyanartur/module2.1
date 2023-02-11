@@ -4,19 +4,19 @@ Input: ([5, 2, 8, 6, 1, 9, 3, 6, 3, 7, 1], [2, 5, 1])
 Output: [5, 6, 1, 3, 6, 3, 7, 1]
 */
 
-const delIndex = (array, indexArray) => {
+const deleteIndex = (array, indexArray) => {
   const result = [];
-  let isDel;
+  let isDelete;
   
   for (let i = 0; i < array.length; i++) {
-    isDel = false;
+    isDelete = false;
     for (let j = 0; j < indexArray.length; j++) {
       if (i === indexArray[j]) {
-        isDel = true;
+        isDelete = true;
       }
     }
 
-    if (!isDel) {
+    if (!isDelete) {
       result.push(array[i])
     }
   }
@@ -24,4 +24,4 @@ const delIndex = (array, indexArray) => {
   return result;
 }
 
-console.log(delIndex([1,2,3,4,5],[0,1]));
+console.log(deleteIndex([1,2,3,4,5],[0,1]));
