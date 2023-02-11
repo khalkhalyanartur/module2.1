@@ -18,7 +18,7 @@ const splitString = (str) => {
   }
 
   for (let i = 0; i < strArray.length; i++) {
-    result.push(strArray[i][0]+randomChar+strArray[i][2]); 
+    result.push(strArray[i][0] + randomChar + strArray[i][2]); 
   }
 
   for (let i = 0; i < result.length; i++) {
