@@ -6,7 +6,7 @@ Output: [1]
 */
 
 const searchRepeat = (...arguments) => {
-  let result = [];
+  const result = [];
   let countArray = 0;
 
   for (let i = 0; i < arguments[0].length; i++) {
