@@ -8,17 +8,17 @@ const arr2 = [4, 5, 6, 7, 8];
 
 const subtractArray = (array1, array2) => {
   const result = [];
-  let no;
+  let isDuplicate;
   
   for (let i = 0; i < array1.length; i++) {
-    no = false;
+    isDuplicate = false;
     for (let j = 0; j < array2.length; j++) {
       if (array1[i] === array2[j]) {
-        no = true;
+        isDuplicate = true;
         break;
       }
     }
-    if (!no) {
+    if (!isDuplicate) {
       result.push(array1[i]);
     }
   }

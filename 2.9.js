@@ -1,7 +1,8 @@
 /*
 Отфильтровать коллекцию по нескольким полям. 
 Функция параметрами принимает массив, первое значение - поле с которым равно, 
-второе значение, больше которого другое поле. Например, в коллекции мне нужно вывести значения, в которых возраст больше 18, а страна 'RF'.
+второе значение, больше которого другое поле. Например, в коллекции мне нужно 
+вывести значения, в которых возраст больше 18, а страна 'RF'.
 
 Input: const arr = [
   {name: "test", age: 34, country: "RF"},
@@ -22,13 +23,13 @@ const arr = [
   {name: "test1", age: 54, country: "RB"}
 ];
 
-const filterTwo = (array, equal, more) => {
+const filterArrayObject = (array, equalValue, moreValue) => {
   const withoutMore = [];
   const result = [];
 
   for(let i = 0; i < array.length; i++) {
     for(key in array[i]) {
-      if(equal === array[i][key]) {
+      if(equalValue === array[i][key]) {
         withoutMore.push(array[i]);
         break;
       }
@@ -37,7 +38,7 @@ const filterTwo = (array, equal, more) => {
 
   for(let i = 0; i < withoutMore.length; i++) {
     for(let key in withoutMore[i]) {
-      if (typeof more === typeof withoutMore[i][key] && withoutMore[i][key] > more ) {
+      if (typeof moreValue === typeof withoutMore[i][key] && withoutMore[i][key] > moreValue ) {
         result.push(withoutMore[i]);
         break;
       }
@@ -47,4 +48,4 @@ const filterTwo = (array, equal, more) => {
 return result;
 }
 
-console.log(filterTwo(arr, "RB", 18));
+console.log(filterArrayObject(arr, "RB", 18));
