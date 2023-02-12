@@ -1,5 +1,6 @@
 /*
-Реализуйте функцию, которая параметрами принимает два объекта и возвращает сообщение равны ли эти два объекта.
+Реализуйте функцию, которая параметрами принимает два объекта и возвращает 
+сообщение равны ли эти два объекта.
 Input:
 const a = { test: 8, text: 9 };
 const b = { test: 8, text: 9 };
@@ -8,20 +9,30 @@ Output: true
 */
 
 const a = { test: 8, text: 9 };
-const b = { test: 8, text: 9 };
+const b = { test: 8, text: 9, task: 9 };
 
-const equalObject = (obj1,obj2) => {
+const equalObject = (obj1, obj2) => {
   let equal;
 
-  for(let key in obj1) {
+  for (let key in obj1) {
     equal = false;
-    for(let key2 in obj2) {
-      if (obj1[key] === obj2[key2] && key === key2) equal = true;
+    for (let key2 in obj2) {
+
+      if (obj1[key] === obj2[key2] && key === key2) {
+        equal = true;
+      }
     }
-    if (!equal) return false;
+    if (!equal) {
+      return false;
+    }  
   }
 
-  return true;
+  if (Object.keys(obj1).length === Object.keys(obj2).length) {
+    return true;
+  } else { 
+    return false; 
+  }
+  
 }
 
 console.log(equalObject(a,b));
