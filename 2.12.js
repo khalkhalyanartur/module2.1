@@ -7,6 +7,7 @@ Output: [ ["dog", 6], ["cat", 11] ]
 const convertObjectToArray = (obj) => {
   const result = [];
   let count = 0;
+  
   for (let key in obj) {
     result[count] = [key, obj[key]];
     count++;
