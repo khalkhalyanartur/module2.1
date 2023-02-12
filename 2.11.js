@@ -13,7 +13,7 @@ const sortUniqueArray = (array) => {
   for (let i = 0; i < array.length; i++) {
     dublicate = false;
     for (let j = 0; j < array.length; j++) {
-      
+
       if (array[i] === array[j] && i != j) {
         dublicate = true;
         break;
@@ -25,7 +25,7 @@ const sortUniqueArray = (array) => {
   }
 
   for (let i = 0; i < result.length; i++) {
-    for (let j = i+1; j < result.length; j++) {
+    for (let j = i + 1; j < result.length; j++) {
 
       if (result[i] > result[j]) {
         let temp = result[i];
