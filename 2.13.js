@@ -14,21 +14,21 @@ Output: {
 }
 */
 
-obj = {
+const obj = {
   name: "test",
-  age: 25,
+  age: '25',
   weight: 65,
   height: 165
 }
 
-const multiplyBy2 = (object) => {
+const multiplyByTwo = (object) => {
   for (let key in object) {
-    if (typeof obj[key]  === 'number') {
-      object[key]*=2;
+    if (typeof obj[key]  === 'number' || !isNaN(Number(obj[key])) ) {
+      object[key]=Number(object[key]) * 2;
     }
   }
 
-  return object
+  return object;
 }
 
-console.log(multiplyBy2(obj));
+console.log(multiplyByTwo(obj));
