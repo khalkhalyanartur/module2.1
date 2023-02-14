@@ -1,12 +1,13 @@
 /*
-Написать функцию, которая вернет массив тех значений, которые есть в первом, но нет во втором массиве.
+Написать функцию, которая вернет массив тех значений, 
+которые есть в первом, но нет во втором массиве.
 Input: ([4, 7, 2, 9, 3, 5, 6, 4, 5, 1, 4], [4, 5, 6, 7, 8])
 Output: [2, 9, 3, 1]
 */
 const arr1 = [4, 7, 2, 9, 3, 5, 6, 4, 5, 1, 4];
 const arr2 = [4, 5, 6, 7, 8];
 
-const subtractArray = (array1, array2) => {
+const getUniqueElements = (array1, array2) => {
   const result = [];
   let isDuplicate;
   
@@ -26,4 +27,4 @@ const subtractArray = (array1, array2) => {
   return result;
 }
 
-console.log(subtractArray(arr1, arr2));
+console.log(getUniqueElements(arr1, arr2));
