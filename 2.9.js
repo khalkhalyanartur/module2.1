@@ -22,29 +22,17 @@ const arr = [
   {name: "test1", age: 54, country: "RB"}
 ];
 
-const filterTwo = (array, equal, more) => {
-  const withoutMore = [];
+const filterArr = (array, equal, more) => {
   const result = [];
 
-  for(let i = 0; i < array.length; i++) {
-    for(key in array[i]) {
-      if(equal === array[i][key]) {
-        withoutMore.push(array[i]);
-        break;
-      }
-    }
+  for (let i = 0; i < array.length; i++) {
+      
+          if (array[i]['country'] === equal && array[i]['age'] > more) {
+              result.push(array[i])
+          }   
   }
 
-  for(let i = 0; i < withoutMore.length; i++) {
-    for(let key in withoutMore[i]) {
-      if (typeof more === typeof withoutMore[i][key] && withoutMore[i][key] > more ) {
-        result.push(withoutMore[i]);
-        break;
-      }
-    }
-  }
-  
 return result;
 }
 
-console.log(filterTwo(arr, "RB", 18));
+console.log(filterArr(arr, "R", 10));
