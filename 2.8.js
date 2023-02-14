@@ -17,7 +17,7 @@ const deleteIndex = (array, indexArray) => {
     }
 
     if (!isDelete) {
-      result.push(array[i])
+      result.push(array[i]);
     }
   }
 
