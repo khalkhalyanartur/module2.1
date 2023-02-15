@@ -17,7 +17,7 @@ function curry(f) { // curry(f) выполняет каррирование
 */
 
 
-const  multyPulty = (a, b, c) => {
+const  multyPulty = (a) => {
   let result;
 
   a % 2 === 0 ? result = a ** 2 : result = a ** 3;
