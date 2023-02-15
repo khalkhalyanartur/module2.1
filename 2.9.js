@@ -14,7 +14,6 @@ Output: [
 ]
 Пример вызова функции: func(array, "RF", 18)
 */
-
 const arr = [
   {name: "test", age: 4, country: "RF"},
   {name: "test2", age: 12, country: "R"},
@@ -26,10 +25,9 @@ const filterArr = (array, equal, more) => {
   const result = [];
 
   for (let i = 0; i < array.length; i++) {
-      
-          if (array[i]['country'] === equal && array[i]['age'] > more) {
-              result.push(array[i])
-          }   
+    if (array[i]['country'] === equal && array[i]['age'] > more) {
+      result.push(array[i])
+    }   
   }
 
 return result;
