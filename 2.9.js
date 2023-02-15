@@ -15,7 +15,6 @@ Output: [
 ]
 Пример вызова функции: func(array, "RF", 18)
 */
-
 const arr = [
   {name: "test", age: 4, country: "RF"},
   {name: "test2", age: 12, country: "R"},
@@ -23,29 +22,17 @@ const arr = [
   {name: "test1", age: 54, country: "RB"}
 ];
 
-const filterArrayObject = (array, equalValue, moreValue) => {
-  const withoutMore = [];
+
+const filterArr = (array, equal, more) => {
   const result = [];
 
-  for(let i = 0; i < array.length; i++) {
-    for(key in array[i]) {
-      if(equalValue === array[i][key]) {
-        withoutMore.push(array[i]);
-        break;
-      }
-    }
+  for (let i = 0; i < array.length; i++) {
+    if (array[i]['country'] === equal && array[i]['age'] > more) {
+      result.push(array[i])
+    }   
   }
 
-  for(let i = 0; i < withoutMore.length; i++) {
-    for(let key in withoutMore[i]) {
-      if (typeof moreValue === typeof withoutMore[i][key] && withoutMore[i][key] > moreValue ) {
-        result.push(withoutMore[i]);
-        break;
-      }
-    }
-  }
-  
 return result;
 }
 
-console.log(filterArrayObject(arr, "RB", 18));
+console.log(filterArr(arr, "R", 10));
